@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+	int a, b, c, d;
+	scanf_s("%d %d %d %d", &a, &b, &c, &d);
+
+	int x = d / 60;
+	int y = d % 60;
+
+	if (c +y >= 60) {
+		b = b + 1;
+		c = c - 60;
+	}
+	
+	if (b + x >= 60) {
+		a = a + 1;
+		b = b - 60;
+	}
+
+	
+	printf("%d %d %d", a, b + x, c + y);
+
+	return 0;
+}
